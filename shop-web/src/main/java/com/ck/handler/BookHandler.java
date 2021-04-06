@@ -20,7 +20,8 @@ public class BookHandler {
         List<Book> bookList = bookService.getAll();
         //添加模型数据
         map.put("bookList", bookList);
-        System.out.println(bookList);
+        //System.out.println(bookList);
+        System.out.println("更新的代码!");
         return "list";
     }
 
