@@ -22,6 +22,7 @@ public class BookHandler {
         map.put("bookList", bookList);
         //System.out.println(bookList);
         System.out.println("更新的代码!");
+        System.out.println("22222");
         return "list";
     }
 
