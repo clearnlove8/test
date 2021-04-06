@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--类型别名设置
+    <typeAliases>
+        <typeAlias type="" alias=""></typeAlias>
+    </typeAliases>
+    -->
+    <settings>
+        <!--日志输出-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--设置加载的数据是按需还是全部-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+    <!--在environments中可以配置多个连接信息:defult(默认指定配置的连接)-->
+    <environments default="mysqlData">
+        <environment id="mysqlData">
+            <!--transactionManager:事务类型-->
+            <!--type指定事务管理器的类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源-->
+            <!--type为类型,通常指定为连接池POOLED-->
+            <dataSource type="POOLED">
+                <!--Driver数据库驱动-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <!--url请求数据库服务地址-->
+                <property name="url" value="jdbc:mysql://localhost:3306/test"/>
+                <!--uesrname请求用户名-->
+                <property name="username" value="root"/>
+                <!--password请求密码-->
+                <property name="password" value="123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入SQL映射文件文件,Mapper映射文件-->
+    <mappers>
+      <mapper resource="mappers/bookManage.xml"></mapper>
+    </mappers>
+</configuration>

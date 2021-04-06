@@ -1,0 +1,5 @@
+com\ck\entity\Book.class
+com\ck\service\IBookService.class
+com\ck\handler\BookHandler.class
+com\ck\dao\IBookDao.class
+com\ck\service\impl\BookServiceImpl.class

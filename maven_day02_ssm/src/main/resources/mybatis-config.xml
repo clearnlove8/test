@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--类型别名设置
+    <typeAliases>
+        <typeAlias type="" alias=""></typeAlias>
+    </typeAliases>
+    -->
+    <settings>
+        <!--日志输出-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--开启延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--设置加载的数据是按需还是全部-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+
+    <!--引入SQL映射文件文件,Mapper映射文件-->
+    <mappers>
+      <mapper resource="mappers/bookManage.xml"></mapper>
+    </mappers>
+</configuration>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ck.dao.IBookDao">
+
+    <select id="getBooks" resultMap="book">
+        select * from bookmanage
+    </select>
+
+    <resultMap id="book" type="com.ck.entity.Book">
+        <result property="bid" column="b_id"></result>
+        <result property="bname" column="b_name"></result>
+        <result property="bauthor" column="b_author"></result>
+        <result property="btime" column="b_time"></result>
+        <result property="btype" column="b_type"></result>
+    </resultMap>
+</mapper>
